@@ -1,0 +1,96 @@
+POST HTTP://localhost:5000/user/register
+Content-Type: application/json
+
+{
+    "name":"user3",
+    "email":"user3@gmail.com",
+    "password":"u3u3u3u3"
+}
+
+###
+POST HTTP://localhost:5000/user/login
+Content-Type: application/json
+
+{
+    "email":"a2@gmail.com",
+    "password":"12as456"
+}
+
+###
+GET  HTTP://localhost:5000/user/logout
+
+###
+
+GET  HTTP://localhost:5000/user/infor
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmYTNiNmM0MzA2MzVlMGMyNGZhMTNkNSIsImlhdCI6MTYwNDU2NDY3NywiZXhwIjoxNjA0NjUxMDc3fQ.4aAgsoOnDG7RLbu3jxPO5TVR-R-AASFNKC5QbKJLbss
+
+###
+
+GET  HTTP://localhost:5000/user/refresh_token
+
+###
+GET HTTP://localhost:5000/api/category
+
+###
+POST HTTP://localhost:5000/api/category
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmYTNiNmM0MzA2MzVlMGMyNGZhMTNkNSIsImlhdCI6MTYwNDU2NDY3NywiZXhwIjoxNjA0NjUxMDc3fQ.4aAgsoOnDG7RLbu3jxPO5TVR-R-AASFNKC5QbKJLbss
+
+{
+    "name":"Category 02"
+}
+
+###
+DELETE  HTTP://localhost:5000/api/category/5fa3c9180a19e31cec0dd747
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmYTNiNmM0MzA2MzVlMGMyNGZhMTNkNSIsImlhdCI6MTYwNDU2NDY3NywiZXhwIjoxNjA0NjUxMDc3fQ.4aAgsoOnDG7RLbu3jxPO5TVR-R-AASFNKC5QbKJLbss
+
+###
+PUT HTTP://localhost:5000/api/category/5fa3cb5e81ba141064ab5cca
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmYTNiNmM0MzA2MzVlMGMyNGZhMTNkNSIsImlhdCI6MTYwNDU2NDY3NywiZXhwIjoxNjA0NjUxMDc3fQ.4aAgsoOnDG7RLbu3jxPO5TVR-R-AASFNKC5QbKJLbss
+
+{
+    "name":"Category 03"
+}
+
+###
+
+GET HTTP://localhost:5000/api/products
+
+###
+
+POST  HTTP://localhost:5000/api/products
+Content-Type: application/json
+
+{
+    "product_id":"pr05",
+    "title":"product 05",
+    "price":1243,
+    "description":"description 5",
+    "images":{
+        "public_id": "test/svmkyevxqvup6e5x5emj",
+        "url": "https://res.cloudinary.com/ddh9wc1vn/image/upload/v1604576786/test/svmkyevxqvup6e5x5emj.jpg"
+        },
+    "content":"content 5",
+    "category":"category 5"
+}
+
+###
+PUT HTTP://localhost:5000/api/products/5fa3e6d6be3b4023889601e2
+Content-Type: application/json
+
+{
+    "title":"Updated product 01",
+    "price":123,
+    "description":"description",
+    "images":{
+        "public_id": "test/svmkyevxqvup6e5x5emj",
+        "url": "https://res.cloudinary.com/ddh9wc1vn/image/upload/v1604576786/test/svmkyevxqvup6e5x5emj.jpg"
+        },
+    "content":"content",
+    "category":"category"
+}
+
+###
+
+DELETE HTTP://localhost:5000/api/products/5fa3e8c533d7912ce054a9ed
